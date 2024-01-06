@@ -12,3 +12,5 @@ My collection of code.
 - **Form.** Formularz z walidacją poprawności wypełnienia pól. Błędne wypełnienie pola sygnalizowane jest czerwoną ramką i gwiazdką. Wysyłanie formularza jest zablokowane do momentu poprawnego wypełnienia wszystkich jego pól - przy próbie wysłania, nad formularzem pojawia się lista ze szczegółowymi błędami.
 
 - **Table.** Tabelka z możliwością wypełniania pól, dodawania wierszy, zmiany kolejności wierszy, usuwania pojedynczych wierszy oraz usuwania wielu zaznaczonych wierszy. Zliczanie liczby wierszy tabeli.
+
+- **To Do List.** Aplikacja w React.js, w której wpisuje się rzeczy do zrobienia i wykreśla się wykonane zadania. Wykonane zadania można ukryć lub usunąć.

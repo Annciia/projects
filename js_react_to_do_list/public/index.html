@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>To do list</title>
+        <style>
+            .task>input:checked+span+span{text-decoration: line-through}
+            .filtr.ukryj>span.ukryj { display: none; }
+            .filtr:not(.ukryj)>span.pokaz { display: none; }
+
+            .task>span.kot:hover{background-color:rgb(246, 212, 74)}
+            body{display: flex; justify-content: center; background-color: rgb(250, 246, 241); margin-top: 15px}
+            .cala_lista {background-color: rgb(255, 229, 195); width: 390px; box-sizing: border-box; padding: 10px; height:auto}
+            .tytul{text-align: center;}
+            .podtytul{border-bottom: 1px solid black; padding-bottom: 6px; color: black}
+            .filtr {text-align: left; margin-left: 137px;}
+            .nic{color: rgb(130, 130, 120); margin-left: 40px}
+            .wysokosc_tekstu>input[type="text"], .wysokosc_tekstu>button, .usuwanie_zadan>button {line-height: 18px; margin-top: 6px;}
+            .wysokosc_tekstu>button, .usuwanie_zadan>button {width: 73px;}
+            .usuwanie_zadan{margin-left: 263px;}
+            .zaangazowanie {margin-top: 35px; height:22px}
+            div.nastawienie {margin-left: 117px}
+        </style>
+    </head>
+    <body>
+        <div class="cala_lista">
+            <div class="tytul">LISTA RZECZY DO ZROBIENIA</div>
+            <div class="podtytul">Cokolwiek masz do zrobienia, żółty kotek Ci pomoże 🐈</div>
+            <div id="id_react_to_do">
+                <!--REACT-->
+            </div>
+        </div>
+    </body>
+</html>
