@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+    <style>
+        #bledy {
+            color: red;
+            border: 5px solid orange;
+            visibility: hidden;
+        }
+        .blad_formularza { /*do gwiazdki*/
+            color: red;
+        }
+        .blad_ramka, .blad_ramka:focus-visible {
+            border-color: red;
+            outline-color: red;
+        }
+    </style>
+    <script src="formularz.js"></script>
+</head>
+<body>
+    <div id="bledy">popraw formularz</div> <!--miejsce gdzie są wyświetlane komunikaty błędów-->
+    <form name="dane_osobowe" action="https://github.com/Annciia/">
+        <table>
+            <tr><td>Imię</td><td><input type="text" name="f_imie" onfocusout="checkString(this);"></td><td id="err_imie" class="blad_formularza"><!--miejsce na gwiazdkę--></td></tr>
+            <tr><td>Nazwisko</td><td><input type="text" name="f_nazwisko" onfocusout="checkString(this);"></td><td id="err_nazwisko" class="blad_formularza"></td></tr>
+            <tr><td>E-mail</td><td><input type="text" name="f_email" onfocusout="checkEmail(this);"></td><td id="err_email" class="blad_formularza"></td></tr>
+            <tr><td>Data urodzenia</td><td><input type="text" name="f_data" placeholder="dd-mm-yyyy" onfocusout="checkData(this);"></td><td id="err_data" class="blad_formularza"></td></tr>
+            <tr><td>Hasło</td><td><input type="password" name="f_haslo" onfocusout="checkHaslo(this);"></td><td id="err_haslo" class="blad_formularza"></td></tr>
+            <tr><td>Powtórz hasło</td><td><input type="password" name="f_powtorzhaslo" onfocusout="checkPowtorzHaslo(this, this.form.elements['f_haslo']);"></td><td id="err_powtorzhaslo" class="blad_formularza"></td></tr>
+            <tr><td>Opis</td><td><textarea rows="5" cols="20" name="f_opis" onkeyup="checkOpis(this);"></textarea></td></tr>
+            <tr><td colspan="2"><input type="submit" value="Prześlij" onclick="return validate(this.form)"></td></tr>
+        </table>
+    </form>
+</body>
+</html>
